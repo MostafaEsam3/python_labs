@@ -1,0 +1,56 @@
+{%extends 'Book/parent.html' %}
+
+{%block name%}
+name
+{%endblock%}
+
+{%block age%}
+age
+{%endblock%}
+
+{%block address%}
+Published
+{%endblock%}
+
+
+
+
+
+{%block content%}
+{%for book in books%}
+<tr>
+    <td>
+        {{book.name}}
+    </td>
+
+     <td>
+        {{book.age}}
+    </td>
+
+     <td>
+        {{book.publish_date}}
+    </td>
+       <td>
+<a href="/book/showDetails/{{book.id}}">{{ book.name }}</a>
+       </td>
+
+
+        <td>
+<a href="/book/delete/{{book.id}}" class="btn btn-danger">Remove </a>
+       </td>
+
+
+
+        <td>
+<a href="/book/update/{{book.id}}" class="btn btn-warning">Update </a>
+       </td>
+
+
+
+</tr>
+
+{%endfor%}
+{%endblock%}
+
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<table class="table" >
+    <thead>
+    <th scope="col">
+        {%block name %}
+        name
+        {% endblock %}
+    </th>
+        <th scope="col">
+
+
+        {%block age %}
+        age
+        {% endblock %}
+    </th>
+
+
+     <th scope="col">
+        {%block address %}
+        address
+        {% endblock %}
+    </th>
+
+
+      <th scope="col">
+        {%block list %}
+        list
+        {% endblock %}
+    </th>
+
+
+      <th scope="col">
+        {%block delete %}
+        delete
+        {% endblock %}
+    </th>
+
+
+      <th scope="col">
+        {%block Update %}
+        Update
+        {% endblock %}
+    </th>
+
+    </thead>
+
+    <tbody>
+       {%block content %}
+
+
+
+
+
+        {% endblock %}
+
+
+    </tbody>
+
+
+</table>
+
+</body>
+</html>
