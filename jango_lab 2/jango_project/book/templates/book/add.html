@@ -1,0 +1,23 @@
+{%extends 'book/parent.html'%}
+
+{%block content%}
+<div class="container ">
+    <div class="row">
+       <div class="d-flex text-align-center justify-content-center ">
+        <form class="col-5 " enctype="multipart/form-data" method="post">
+            {%csrf_token%}
+<!--
+          <button type="submit" class="btn btn-primary">Submit</button>-->
+<div class="m-2 text-light ">
+    {{form}}
+</div>
+
+                 <button type="submit" class="btn btn-warning ">Submit</button>
+        </form>
+       </div>
+     </div>
+<div>
+    {{msg}}
+</div>
+</div>
+{%endblock%}

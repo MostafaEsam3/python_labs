@@ -1,0 +1,21 @@
+{%extends 'book/parent.html'   %}
+{%block content %}
+<table class="table table-success table-hover table-striped table-striped-columns">
+<tr class="">
+    <th>ID</th>
+    <th>Title</th>
+    <th>version</th>
+    <th>image</th>
+    <th  class="text-center">Action</th>
+</tr>
+    <tr>
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.version}}</td>
+        <td>
+            <a href="{%url 'list_book' %}" class="btn btn-warning">prev</a>
+        </td>
+        <td><a href="{%url 'list_book' %}" class="btn btn-warning">prev</a></td>
+    </tr>
+</table>
+{%endblock%}

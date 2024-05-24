@@ -1,0 +1,46 @@
+from django.urls import path
+{%extends 'book/parent.html'   %}
+{%block title%}
+List-Book
+{%endblock%}
+{%block content%}
+<div class="row">
+    <div class="col-6">
+        <ul>
+        <li>            <a href=" {% url 'list_book' %}">List</a></li>
+        <li>            <a href=" {% url 'add_book' %}">add</a></li>
+        <li>            <a href=" {% url 'book_addmodel' %}"> add model</a></li>
+        <li>            <a href="{% url 'book_ModelForm' %}"></a>AddBook</li>
+
+        </ul>
+    </div>
+
+    <div class="col-6">
+<table class="table table-success table-hover table-striped table-striped-columns">
+<tr class="">
+    <th>ID</th>
+    <th>Title</th>
+    <th>version</th>
+    <th>Image</th>
+    <th colspan="5" class="text-center">Action</th>
+</tr>
+    {%for book in books%}
+        <tr>
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.version}}</td>
+            <td>
+
+            </td>
+            <td><a href="" class="btn btn-primary">Add</a></td>
+            <td><a href="{% url 'book_ModelForm'  %}" class="btn btn-dark">AddBook</a></td>
+            <td><a href="{% url 'update_book' book.id %}" class="btn btn-primary">Update</a></td>
+            <td><a href="{% url 'details_bookId' book.id %}" class="btn btn-primary">details</a></td>
+            <td><a href="{% url 'delete_bookId' book.id %}" class="btn btn-danger">Delete</a></td>
+        </tr>
+
+    {%endfor%}
+</table>
+        </div>
+</div>
+{%endblock%}
